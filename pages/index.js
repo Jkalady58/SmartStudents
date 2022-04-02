@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { useState } from "react";
-import { connectToDatabase } from "./mongodb-next-todo/util/mongodb";
-import Todos from "./mongodb-next-todo/components/Todos";
-import NewTodoForm from "./mongodb-next-todo/components/NewTodoForm";
+import { connectToDatabase } from "../util/mongodb";
+import Todos from "../components/Todos";
+import NewTodoForm from "../components/NewTodoForm";
 
 import "tailwindcss/tailwind.css";
 
