@@ -10,27 +10,27 @@ export default function Home({ isConnected, todos }) {
   const [allTodos, setAllTodos] = useState(todos || []);
 
   return (
-    <div className="flex justify-center bg-green-600 min-h-screen">
+    <div className="flex justify-center bg-blue-600 min-h-screen">
       <Head>
-        <title>MongoDB Atlas & Next.js Todo App</title>
+        <title>Help Desk Ticket Manager</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="container bg-white rounded shadow p-6 m-4 w-full lg:w-3/4">
         <h1 className="text-2xl font-bold text-grey-darkest">
-          MongoDB Atlas & Next.js Todo App
+         Make a Ticket
         </h1>
         {isConnected ? (
           <>
-            <h2 className="text-green-600 pt-4">
-              You are connected to MongoDB
+            <h2 className="text-blue-600 pt-4">
+              You are connected to Help Desk DB
             </h2>
             <NewTodoForm setAllTodos={setAllTodos} />
             <Todos allTodos={allTodos} setAllTodos={setAllTodos} />
           </>
         ) : (
-          <h2 className="text-red-500 pt-4">
-            You are NOT connected to MongoDB. Check the <code>README.md</code>{" "}
+          <h2 className="text-yellow-500 pt-4">
+            You are NOT connected to Help DB. Check the <code>README.md</code>{" "}
             for instructions.
           </h2>
         )}
