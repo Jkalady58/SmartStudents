@@ -1,21 +1,52 @@
-
 <head>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="center">
-    <h1> Customer Login </h1>
+        <h1> Customer Login </h1>
     </div>
-    
+
     <form class="center">
-        <label for="username">username:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">password:</label><br>
-        <input type="text" id="password" name="password"><br>
+        <label for="username" id="usrn">username:</label><br>
+        <input autocomplete="off" type="text" id="username" name="username"><br>
+        <label for="password" id="pswd">password:</label><br>
+        <input autocomplete="off" type="text" id="password" name="password"><br>
     </form>
-    
+        <div id="Textarea"><a></a></div>
+
+    <script type="text/javascript">
+
+        function Login() {
+            if (document.getElementById('username').value.includes( 'Kazi')) {
+                if (document.getElementById('password').value.includes( 'Password')){
+                    document.getElementById('HomeLink').hidden = false;
+                    document.getElementById('login').hidden = true;
+                    document.getElementById('SignUp').hidden = true;
+                    var div = document.getElementById('Textarea');
+                    div.innerText = 'User Found';
+                }
+                else {
+                    var div = document.getElementById('Textarea');
+                    div.innerText = 'User Not Found';
+                }
+            }
+            else {
+                var div = document.getElementById('Textarea');
+                div.innerText = 'User Not Found';
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+
+
+
+
+    </script>
     <div class="center">
-        <a href="customerDirectory.html">Sign in</a>
-        <a href="signUp.html">Sign up</a>
+        <button id= "login" onclick='Login()' >Sign in</button>
+        <a id="HomeLink" hidden href="customerDirectory.html" >Home Page!</a>
+        <a id="SignUp" href="signUp.html">Sign up</a>
     </div>
 </body>
