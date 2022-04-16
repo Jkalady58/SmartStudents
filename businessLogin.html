@@ -1,0 +1,59 @@
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="topnav">
+       <a href="index.html">Home</a>
+    </div>
+    
+<h1>Business Login</h1>
+<form>
+  <div class="container">
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="text" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Sign in</button>
+  </div>
+
+  <div class="container">
+      <a class="signupbtn" href="createAccount.html"> Sign up</a>
+  </div>
+</form>
+
+
+    <script type="text/javascript">
+
+        function Login() {
+            if (document.getElementById('username').value.includes( 'Kazi')) {
+                if (document.getElementById('password').value.includes( 'Password')){
+                    document.getElementById('HomeLink').hidden = false;
+                    document.getElementById('login').hidden = true;
+                    document.getElementById('SignUp').hidden = true;
+                    var div = document.getElementById('Textarea');
+                    div.innerText = 'User Found';
+                }
+                else {
+                    var div = document.getElementById('Textarea');
+                    div.innerText = 'User Not Found';
+                }
+            }
+            else {
+                var div = document.getElementById('Textarea');
+                div.innerText = 'User Not Found';
+            }
+        }
+    </script>
+<!--    <div class="center">-->
+<!--        -->
+<!--        <button id= "login" onclick='Login()' >Sign in</button>-->
+<!--        <a  id="HomeLink" hidden href="businessHomepage.html">Home Page!</a>-->
+<!--        <button id="SignUp"  href="signUp.html">Sign up</button>-->
+<!--    </div>-->
+        
+    
+</body>
