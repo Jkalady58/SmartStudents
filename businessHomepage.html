@@ -5,14 +5,36 @@
 <body>
     <div class="topnav">
         <a href="index.html">Home</a>
-        <a href="http://localhost:3000">Create a Ticket</a>//ticket screen
+        <a href="http://localhost:3000">Create a Ticket</a>
         <a href="history.html">History</a>
-        <a href="talkToARepresentative.html">Chat</a>
-        
     </div>
     
-    <header>
+    <header class="center">
         <h1>Business Directory</h1>
     </header>
+
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Chat</h1>
+
+        <label for="msg"><b>Message</b></label>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
+    <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
        
 </body>
