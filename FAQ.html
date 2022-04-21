@@ -3,12 +3,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="center">
-    <h1>FAQ</h1>
+    <div class="topnav">
+        <a href="index.html">Home</a>
     </div>
-    <div class="center">
-        <p> Coming Soon </p>
+    
+    <header class="center">
+        <h1>FAQs</h1>
+    </header>
+
+    <button class="accordion">Question 1</button>
+    <div class="panel">
+      <p>Answer</p>
     </div>
-   
-   
+
+    <button class="accordion">Question 2</button>
+    <div class="panel">
+      <p>Answer</p>
+    </div>
+
+    <button class="accordion">Question 3</button>
+    <div class="panel">
+      <p>Answer</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+</div>
 </body>

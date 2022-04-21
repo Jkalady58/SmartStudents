@@ -2,19 +2,31 @@
 <head>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="center">
-    <h1> Business Login </h1>
+    <div class="topnav">
+       <a href="index.html">Home</a>
     </div>
     
-    <form class="center">
-        <label for="username">username:</label><br>
-        <input autocomplete="off" type="text" id="username" name="username"><br>
-        <label for="password">password:</label><br>
-        <input autocomplete="off" type="text" id="password" name="password"><br>
-        <div id="Textarea"><a></a></div>
-    </form>
-    
+<h1>Business Login</h1>
+
+<form>
+  <div class="container">
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="text" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Sign in</button>
+  </div>
+
+  <div class="container">
+      <a class="signupbtn" href="createAccount.html"> Sign up</a>
+  </div>
+</form>
+
+
     <script type="text/javascript">
 
         function Login() {
@@ -37,12 +49,4 @@
             }
         }
     </script>
-    <div class="center">
-        
-        <button id= "login" onclick='Login()' >Sign in</button>
-        <a  id="HomeLink" hidden href="businessHomepage.html">Home Page!</a>
-        <a id="SignUp"  href="signUp.html">Sign up</a>
-    </div>
-        
-    
 </body>
