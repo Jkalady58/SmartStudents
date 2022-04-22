@@ -1,6 +1,7 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="chatbot.js"></script>
 </head>
 <body>
     <div class="topnav">
@@ -25,22 +26,14 @@
       <form action="/action_page.php" class="form-container">
         <h1>Chat</h1>
 
-        <label for="msg"><b>Message</b></label>
-        <textarea placeholder="Type message.." name="msg" required></textarea>
-
-        <button type="submit" class="btn">Send</button>
+        <label for="message"><b>Message</b></label>
+        <div id="chatbox"></div>
+        <input name="usermsg" type="text" autocomplete="off" id="usermsg" />
+        
+        
+        <input name="submitmsg" type="button" class="btn" id="submitmsg"  value="Send" onclick="chat()"/>
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
       </form>
     </div>
-
-    <script>
-    function openForm() {
-      document.getElementById("myForm").style.display = "block";
-    }
-
-    function closeForm() {
-      document.getElementById("myForm").style.display = "none";
-    }
-    </script>
        
 </body>
