@@ -18,7 +18,7 @@
     <div class="center">
         <form class="container">
             <input type="text" id="query" placeholder="What are you looking for?" name="Search">
-            <button type="submit">Search</button>
+            <button type="submit" class="search">Search</button>
         </form>
     </div>
     
@@ -59,10 +59,12 @@
         <h1>Chat</h1>
 
         <label for="message"><b>Message</b></label>
-        <textarea placeholder="Type message.." name="message" required></textarea>
+<div id="chatbox"></div>
+<input name="usermsg" type="text" autocomplete="off" id="usermsg" />
 
-        <button type="submit" class="btn">Send</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+<input name="submitmsg" type="button" class="btn" id="submitmsg"  value="Send" onclick="chat()"/>
+<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
       </form>
     </div>
 
@@ -73,6 +75,19 @@
 
     function closeForm() {
       document.getElementById("myForm").style.display = "none";
+    }
+    function chat(){
+        var inputVal = document.getElementById("usermsg").value;
+    var yesbutton = document.createElement('button');yesbutton.type = 'button';yesbutton.innerHTML = 'Yes';
+    var nobutton = document.createElement('button');nobutton.type = 'button';nobutton.innerHTML = 'No';
+    nobutton.onclick = function() {
+        document.getElementById("chatbox").innerHTML += "<br>" + "Would you like to generate a ticket?" + "<br";
+    }
+    document.getElementById("chatbox").innerHTML += "<br>" +"User:  "  + inputVal + "<br>";
+    document.getElementById("chatbox").innerHTML += "Chatbot: Generating results for "  + inputVal + "<br>" +"Chatbot: Did that answer your question?" + "<br>";
+    //print out results from database here
+    document.getElementById("chatbox").appendChild(yesbutton);
+    document.getElementById("chatbox").appendChild(nobutton);
     }
     </script>
    

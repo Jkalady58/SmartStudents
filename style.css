@@ -76,7 +76,20 @@ body {
     font-size: 18s;
 
 }
-
+/* Creates look of chatbox */
+#chatbox { 
+  text-align: left;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 10px;
+  background: #fff;
+  height: 340px;
+  width: 280px;
+  border: 1px solid #a7a7a7;
+  overflow: auto;
+  border-radius: 4px;
+  border-bottom: 4px solid #a7a7a7;
+}
 
 a {
     padding: 8px;
@@ -180,6 +193,10 @@ button {
   border: 20;
 }
 
+.yesButton {
+  all:initial;
+}
+
 /* Button used to open the chat form - fixed at the bottom of the page */
 .open-button {
   background-color: #555;
@@ -238,6 +255,7 @@ button {
   width: 100%;
   margin-bottom:10px;
   opacity: 0.8;
+  list-style: not("inBox");
 }
 
 /* Add a red background color to the cancel button */
@@ -249,6 +267,7 @@ button {
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
 
 </style>
 </head>
