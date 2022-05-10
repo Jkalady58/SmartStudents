@@ -1,15 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Homepage</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+    box-sizing: border-box;
+}
+  
+/* Styles the body of the page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #F9E7CD;
+}
+
+/* Style the header */
+.header {
+    background-color: #eacfc2;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Style the top navigation bar */
+.topNav {
+    overflow: hidden;
+    background-color: #604a58;
+}
+
+/* Style the top navigation links */
+.topNav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+/* Create columns that float next to each other */
+.column {
+    float: left;
+    width: 30%;
+    padding:15px;
+}
+
+/* Clear floats after the columns */
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+    
+/* Centers all content */
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    text-align: center;
-}
-a {
-    padding: 8px;
+/*    height: auto;*/
+/*    width: auto;*/
+/*    text-align: center;*/
+/*    font-size: 18;*/
+    padding: 10px 16px;
+    
 }
 
-.img {
-    width: 100px;
-    height: auto;
+/* Styles paragraphs */
+.p {
+    font-size: 18;
+    padding: 10px 16px
 }
+
+/*Styles boxes in homepage*/
+.div1 {
+  width: 300px;
+  height: 170px;
+  border: 4px solid green;
+  border-style: dotted;
+  box-sizing: border-box;
+  font-size: 25;
+  text-align:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: darkred;
+  background: lightgray;
+  font-family: American typewriter;
+}
+
+/* Style button links */
+a {
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    
+}
+
+/* Style images in customer directory */
+.img {
+    border-radius: 10%;
+    width: 150px;
+    height: auto;
+/*    background: lightgray:*/
+}
+
+/* Styles font h1 */
+h1 {
+    padding: 10px;
+    color: black;
+    font-family: arial;
+    font-size: 35;
+}
+
+/* Styles font h2 */
+h2 {
+    padding: 20px;
+    color: black;
+    font-family: arial;
+    font-size: 22;
+}
+
+
+/* Styles username and password */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16;
+}
+
+/* Styles login page */
+.login {
+    width: 382px;
+    overflow: hidden;
+    margin: auto;
+    padding: 80px;
+    background: #eacfc2;
+    border-radius: 15px;
+}
+
+/* Style business login link */
+.businessLogin{
+   width: 300px;
+   height: 30px;
+   border: none;
+   border-radius: 3px;
+   padding-left: 17px;
+   color: black;
+   text-decoration: underline;
+   
+   
+}
+
+
+/* Style the sign in button */
+button {
+  width: 50%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border:none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 16px;
+  
+}
+
+/* Style the sign up button */
+.signUpButton {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  display: inline-block:
+}
+
+/* Styles username and password boxes */
+.container {
+    width:50%;
+    padding: 10px;
+    text-align: left;
+    
+}
+
+/* Styles accordion in FAQs */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+/* Styles accordion panel in FAQs */
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+</style>
+</head>

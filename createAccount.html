@@ -3,11 +3,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="center">
-        <h1>Create Account</h1>
+    
+<!--    Creates navigation bar with links-->
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="customerLogin.html">Login</a>
     </div>
     
-    <div class="center"
-        <p> Coming Soon </p>
-    </div>
+<!--    Allows user to create an account-->
+    <form><br>
+        <h1>Sign Up</h1>
+        <div class="container">
+            <p>Please fill in this form to create an account.</p>
+            <hr><br>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="text" placeholder="Enter Password" name="password" required>
+
+            <label for="password-repeat"><b>Repeat Password</b></label>
+            <input type="text" placeholder="Repeat Password" name="password-repeat" required>
+        
+
+            <div class="clearfix">
+                <button type="submit" class="signupbtn">Create an Account</button>
+            </div>
+      </div>
+    </form>
+
+
 </body>
