@@ -3,18 +3,59 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="center">
-        <h1>Business Directory</h1>
+<!--    Creates navigation bar with links-->
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="http://localhost:3000">Create a Ticket</a>
     </div>
     
+<!--    Title of the page-->
+    <header class="center">
+        <h1>Business Directory</h1>
+    </header>
     
+<!--    Creates search bar and search button-->
     <div class="center">
+<<<<<<< HEAD
         <a href="mainMenu.html">Main menu</a>
         <a href="http://localhost:3000">Create a Ticket</a>//ticket screen
         <a href="history.html">History</a>
         <a href="talkToARepresentative.html">Chat</a>
+=======
+        <form class="container">
+            <input type="text" id="query" placeholder="What are you looking for?" name="Search">
+            
+            <div class="center">
+                <button type="submit">Search</button>
+            </div>
+        </form>
+>>>>>>> 2793a2c56a7422428c115d06b1f8500757d21078
     </div>
-    
-   
-   
+
+<!--    Creates chat box-->
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Chat</h1>
+
+        <label for="msg"><b>Message</b></label>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
+<!--    Creates chat box functionality-->
+    <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+       
 </body>
